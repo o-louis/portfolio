@@ -19,7 +19,6 @@ import pythonLogo from "../images/python.png"
 const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
-    padding: 0 3rem;
     .title-bloc {
         display: flex;
         h1 {
@@ -68,6 +67,7 @@ const StyledSection = styled.section`
         }
     }
     @media (min-width: 768px) {
+        padding: 0 3rem;
         margin: 0;
         margin-left: 0;
         .logos-container {
@@ -95,7 +95,7 @@ const StyledSection = styled.section`
     }
 `
 const Skills = () => (
-    <Layout>
+    <Layout template="skills">
         <StyledSection>
             <div className="title-section">
                 <div className="title-bloc">

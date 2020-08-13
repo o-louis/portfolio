@@ -20,6 +20,7 @@ const StyledLayout = styled.div`
     max-width: ${props => props.template ? null : "26rem"};
     margin: 0 auto;
     padding-top: 3rem;
+    
     position: relative;
     display: flex;
     flex-direction: column;

@@ -9,7 +9,6 @@ import mylittleparisLogo from '../images/mylittleparis.png'
 const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
-    padding: 0px 3rem;
 
     .title-section {
         margin-bottom: 30px;
@@ -104,6 +103,7 @@ const StyledSection = styled.section`
         margin: 0;
     }
     @media (min-width: 768px) {
+        padding: 0 3rem;
         margin: 0;
         margin-left: 0;
         .content {
