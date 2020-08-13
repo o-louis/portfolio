@@ -13,10 +13,11 @@ const StyledLayout = styled.div`
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   padding: 0 1.5rem;
+  overflow-x: hidden;
   #main-content {
     width: 100%;
     height: 100%;
-    max-width: 26rem;
+    max-width: ${props => props.template ? null : "26rem"};
     margin: 0 auto;
     padding-top: 3rem;
     position: relative;
@@ -27,19 +28,19 @@ const StyledLayout = styled.div`
   }
   @media (min-width: 768px) {
     #main-content {
-      max-width: 39rem;
+      max-width: ${props => props.template ? null : "39rem"};
     }
   }
   @media (min-width: 1024px) {
     #main-content {
       margin: 0;
-      max-width: 1600px;
+      max-width: ${props => props.template ? null : "1600px"};
     }
   }
 `
 
-const Layout = ({ children }) => (
-  <StyledLayout>
+const Layout = ({ children, template }) => (
+  <StyledLayout template={template} >
     <GlobalStyle />
     <Header />
     <main id="main-content">{children}</main>

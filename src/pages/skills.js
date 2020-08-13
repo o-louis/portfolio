@@ -19,7 +19,7 @@ import pythonLogo from "../images/python.png"
 const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    padding: 0 3rem;
     .title-bloc {
         display: flex;
         h1 {
