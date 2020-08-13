@@ -1,42 +1,38 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React, { useState } from 'react'
+import Logo from './logo';
+import Navbar from './navbar';
+import Hamburger from './hamburger';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import styled from 'styled-components'
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const StyledHeader = styled.header`
+    padding: 35px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+`
 
-Header.defaultProps = {
-  siteTitle: ``,
+
+const Header = () => {
+    const [status, setStatus] = useState("");
+    const [navStatus, setNavStatus] = useState("");
+
+    const toggleMenu = () => {
+        if (status) {
+            setStatus(""); setNavStatus("");
+        } else {
+            setStatus("close"); setNavStatus("open");
+        }
+    }
+
+    return (
+        <StyledHeader>
+            <Logo />
+            <Hamburger status={status} toggleMenu={toggleMenu}/> {/* Mobile */}
+            <Navbar status={navStatus} />
+        </StyledHeader>
+    )
 }
 
 export default Header
