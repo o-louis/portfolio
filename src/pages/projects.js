@@ -43,6 +43,7 @@ const StyledSection = styled.section`
         grid-template-columns: repeat(1, 100%);
         grid-row-gap: 40px;
         .projects-item {
+            overflow: hidden;
             color: #747474;
             justify-self: center;
             padding: 15px;
@@ -51,8 +52,8 @@ const StyledSection = styled.section`
             max-width: 400px;
             .projects-img {
                 margin-bottom: 10px;
-                width: 100%;
-                height: 60%
+                overflow: hidden;
+                height: 166px;
             }
             .projects-infos {
                 h4 {

@@ -86,7 +86,7 @@ const Navbar = ({ status }) => {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/skills">Skills</Link></li>
                 <li><Link to="/projects">Projects</Link></li>
-                <li><Link to="/Resume">Resume</Link></li>
+                <li><a href="./Oriane_Louis_Resume.pdf" target="blank">Resume</a></li>
             </ul>
             <Social />
         </StyledNav>

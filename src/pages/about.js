@@ -55,8 +55,8 @@ const StyledSection = styled.section`
                 }
             }
             .company-logo {
-                width: 45%;
-                height: 45%;
+                width: 29%;
+                height: 39%;
                 margin-bottom: 10px;
             }
             h3 {
@@ -114,7 +114,7 @@ const StyledSection = styled.section`
         .content {
             .post {
                 .company-logo {
-                    width: 30%;
+                    width: 20%;
                     height: 30%;
                 }
                 &.interests {
@@ -125,6 +125,14 @@ const StyledSection = styled.section`
     }
     @media (min-width: 1024px) {
         margin-left: 90px;
+        .content {
+            .post {
+                max-width: 900px;
+                .post-experience {
+                    padding: 20px;
+                }
+            }
+        }
     }
     @media (min-width: 1224px) {
         max-width: 1400px;
@@ -134,8 +142,8 @@ const StyledSection = styled.section`
                     font-size: 1.6rem;
                 }
                 .company-logo {
-                    width: 15%;
-                    height: 15%;
+                    width: 18%;
+                    height: 18%;
                 }
                 h3 {
                     font-size: 1.5rem;
