@@ -38,8 +38,6 @@ const StyledSection = styled.section`
     .content {
         margin-bottom: 100px;
         .post {
-            // background-color: rgba(196, 196, 196, 0.1);
-            padding: 15px;
             .post-experience {
                 background-color: rgba(196, 196, 196, 0.1);
                 padding: 15px;
@@ -83,17 +81,16 @@ const StyledSection = styled.section`
             }
             &.interests {
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-row-gap: 20px;
+                grid-template-columns: repeat(1, 1fr);
+                grid-row-gap: 10px;
+                width: 100%;
                 div {
-                    background-color: black;
-                    width: 95%;
                     border-radius: 2px;
-                    color: #747474;
                     text-transform: uppercase;
                     text-align: center;
                     font-size: 1rem;
-                    padding: 2px 0px;
+                    padding: 3%;
+                    background-color: rgba(196, 196, 196, 0.1);
                 }
             }
         }
@@ -101,6 +98,14 @@ const StyledSection = styled.section`
 
     @media (min-width: 481px) {
         margin: 0;
+        .content {
+            .post {
+                &.interests {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column-gap: 10px;
+                }
+            }
+        }
     }
     @media (min-width: 768px) {
         padding: 0 3rem;
@@ -111,6 +116,9 @@ const StyledSection = styled.section`
                 .company-logo {
                     width: 30%;
                     height: 30%;
+                }
+                &.interests {
+                    grid-template-columns: repeat(3, 1fr);
                 }
             }
         }
@@ -248,8 +256,8 @@ const About = () => (
                 <div className="post interests">
                     <div>Astronomy</div>
                     <div>Nature</div>
-                    <div>Instruments</div>
-                    <div>Reading</div>
+                    <div>Playing music</div>
+                    <div>Books</div>
                     <div>Marketing</div>
                     <div>History</div>
                 </div>
