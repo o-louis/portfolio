@@ -59,6 +59,9 @@ const StyledSection = styled.section`
                 h4 {
                     margin-bottom: 10px;
                     font-size: 1.2rem;
+                    a {
+                        margin-left: 5px;
+                    }
                 }
                 .technologies {
                     display: flex;
@@ -151,7 +154,7 @@ const Projects = () => (
                         <img src={starzplay} alt="starzplay" />
                     </div>
                     <div className="projects-infos">
-                        <h4>STARZPLAY</h4>
+                        <h4>STARZPLAY<a href="https://m.boutique.orange.fr/tv/starzplay" target="blank">for Orange STBs</a></h4>
                         <div className="technologies">
                             <div>Javascript</div>
                             <div>JQuery</div>
@@ -166,7 +169,7 @@ const Projects = () => (
                         <img src={arte} alt="arte" />
                     </div>
                     <div className="projects-infos">
-                        <h4>ARTE</h4>
+                        <h4>ARTE  <a href="https://www.arte.tv/fr/" target="blank"> for HbbTV</a></h4>
                         <div className="technologies">
                             <div>Javascript</div>
                             <div>MVC</div>
