@@ -4,6 +4,8 @@ import styled from 'styled-components'
 
 import Social from './social'
 
+import Pdf from '../images/Oriane_Louis_Resume.pdf';
+
 const StyledNav = styled.nav`
     position: fixed;
     right: 0;
@@ -86,7 +88,7 @@ const Navbar = ({ status }) => {
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/skills">Skills</Link></li>
                 <li><Link to="/projects">Projects</Link></li>
-                <li><a href="./static/Oriane_Louis_Resume.pdf" target="blank">Resume</a></li>
+                <li><a href={Pdf} target="blank">Resume</a></li>
             </ul>
             <Social />
         </StyledNav>
