@@ -189,7 +189,7 @@ const Projects = () => (
                             <div>Reactjs</div>
                             <div>Nodejs</div>
                         </div>
-                        <a href="#">View source</a>
+                        <a href="https://github.com/o-louis/MERN-Blog" target="blank">View source</a>
                     </div>
                 </div>
 
@@ -203,7 +203,7 @@ const Projects = () => (
                             <div>Reactjs</div>
                             <div>Javascript</div>
                         </div>
-                        <a href="#">View source</a>
+                        <a href="https://github.com/o-louis/covid-tracker-19" target="blank">View source</a>
                     </div>
                 </div>
 
@@ -217,7 +217,7 @@ const Projects = () => (
                             <div>Reactjs</div>
                             <div>SocketIO</div>
                         </div>
-                        <a href="#">View source</a>
+                        <a href="https://github.com/o-louis/chat-app" target="blank">View source</a>
                     </div>
                 </div>
 
@@ -232,7 +232,7 @@ const Projects = () => (
                             <div>Ejs</div>
                             <div>Jwt</div>
                         </div>
-                        <a href="#">View source</a>
+                        <a href="https://github.com/o-louis/authentication" target="blank">View source</a>
                     </div>
                 </div>
             </div>
