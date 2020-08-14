@@ -129,13 +129,13 @@ const StyledSection = styled.section`
         }
     }
     @media (min-width: 1024px) {
-        margin-left: 90px;
         .projects {
             grid-template-columns: repeat(3, 30%);
             grid-column-gap: 20px;
         }
     }
     @media (min-width: 1224px) {
+        margin-left: 90px;
         max-width: 1400px;
     }
 `

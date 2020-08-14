@@ -7,18 +7,14 @@ import LinkedInIcon from "./icons/linkedin"
 const StyledSocial = styled.div`
     display: none;
     @media (min-width: 768px) {
-        position: fixed;
-        bottom: 34px;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        padding-right: 3.4rem;
-        z-index: -1;
+        display: block;
         .social {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            // justify-content: flex-end;
             align-items: center;
+            position: fixed;
+            bottom: 0;
             .line {
                 background-color: white;
                 height: 120px;
@@ -40,9 +36,11 @@ const StyledSocial = styled.div`
         .social-email {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
             align-items: center;
-            position: relative;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            padding-right: 3rem;
             span {
                 position: absolute;
                 bottom: 133px;

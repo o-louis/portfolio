@@ -44,8 +44,11 @@ const Layout = ({ children, template }) => (
   <StyledLayout template={template} >
     <GlobalStyle />
     <Header />
-    <main id="main-content">{children}</main>
-    <SocialAside />
+    <main id="main-content">
+      {children}
+      <SocialAside />
+    </main>
+    {/* <SocialAside /> */}
   </StyledLayout>
 )
 
