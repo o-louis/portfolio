@@ -90,7 +90,8 @@ const StyledSection = styled.section`
                     text-align: center;
                     font-size: 1rem;
                     padding: 3%;
-                    background-color: rgba(196, 196, 196, 0.1);
+                    border: 1px solid #747474;
+                    border-radius: 3px;
                 }
             }
         }

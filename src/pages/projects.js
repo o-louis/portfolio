@@ -49,6 +49,7 @@ const StyledSection = styled.section`
             padding: 15px;
             font-size: 1.3rem;
             background-color: rgba(196, 196, 196, 0.1);
+            border-radius: 3px;
             max-width: 400px;
             .projects-img {
                 margin-bottom: 10px;
@@ -59,6 +60,7 @@ const StyledSection = styled.section`
                 h4 {
                     margin-bottom: 10px;
                     font-size: 1.2rem;
+                    color: white;
                     a {
                         margin-left: 5px;
                     }
