@@ -13,6 +13,7 @@ const StyledSocial = styled.div`
         justify-content: space-between;
         width: 100%;
         padding-right: 3.4rem;
+        z-index: -1;
         .social {
             display: flex;
             flex-direction: column;
