@@ -42,7 +42,7 @@ const Social = ({ onHomePage}) => {
         <StyledSocial className="social-infos" >
             <div className="social-icons">
                 <a href="https://github.com/o-louis" target="blank" className="github"><GithubIcon /></a>
-                <a href="https://linked.com/in/oriane-louis" target="blank"><LinkedInIcon /></a>
+                <a href="https://www.linkedin.com/in/oriane-louis/" target="blank"><LinkedInIcon /></a>
             </div>
             <span className="email">oriane.louis.pro@gmail.com</span>
         </StyledSocial>

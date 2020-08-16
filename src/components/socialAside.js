@@ -63,7 +63,7 @@ const SocialAside = () => (
         <div className="social">
             <div className="social-icons">
                 <a href="https://github.com/o-louis" target="blank" className="github"><GithubIcon /></a>
-                <a href="https://linked.com/in/oriane-louis" target="blank"><LinkedInIcon /></a>
+                <a href="https://www.linkedin.com/in/oriane-louis/" target="blank"><LinkedInIcon /></a>
             </div>
             <div className="line"></div>
         </div>
