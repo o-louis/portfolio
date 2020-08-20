@@ -107,44 +107,44 @@ const Skills = () => (
 
             <div className="logos-container">
                 <div className="logos">
-                    <img src={javascriptLogo}/>
+                    <img src={javascriptLogo} alt="javascript-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={reactLogo}/>
+                    <img src={reactLogo} alt="react-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={typescriptLogo}/>
+                    <img src={typescriptLogo} alt="typescript-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={htmlLogo}/>
+                    <img src={htmlLogo} alt="html-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={cssLogo}/>
+                    <img src={cssLogo} alt="css-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={bootstrapLogo}/>
+                    <img src={bootstrapLogo} alt="bootstrap-logo"/>
                 </div>
 
                 <div className="logos">
-                    <img src={nodejsLogo}/>
+                    <img src={nodejsLogo} alt="nodejs-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={mongodbLogo}/>
+                    <img src={mongodbLogo} alt="mongodb-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={vuejsLogo}/>
+                    <img src={vuejsLogo} alt="vuejs-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={webpackLogo}/>
+                    <img src={webpackLogo} alt="webpack-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={babelLogo}/>
+                    <img src={babelLogo} alt="babel-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={pythonLogo}/>
+                    <img src={pythonLogo} alt="python-logo"/>
                 </div>
                 <div className="logos">
-                    <img src={sassLogo}/>
+                    <img src={sassLogo} alt="sass-logo"/>
                 </div>
 
             </div>

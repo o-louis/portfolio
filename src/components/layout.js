@@ -1,4 +1,5 @@
 import React from "react"
+import Helmet from "react-helmet"
 import styled from "styled-components"
 
 import Header from "./header"
@@ -40,6 +41,9 @@ const StyledLayout = styled.div`
 
 const Layout = ({ children, template }) => (
   <StyledLayout template={template} >
+    <Helmet>
+        <title>Oriane Louis | Developer</title>
+    </Helmet>
     <GlobalStyle />
     <Header />
     <main id="main-content">

@@ -86,6 +86,7 @@ const StyledSection = styled.section`
                 a {
                     font-size: 1rem;
                     text-decoration: underline;
+                    margin-right: 10px;
                 }
                 .disabled {
                     font-size: 1rem;
@@ -207,6 +208,7 @@ const Projects = () => (
                             <div>Javascript</div>
                         </div>
                         <a href="https://github.com/o-louis/covid-tracker-19" target="blank">View source</a>
+                        <a href="https://covidtracker19-olouis.netlify.app" target="blank">Preview</a>
                     </div>
                 </div>
 

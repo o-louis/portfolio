@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import GithubIcon from "./icons/github"
@@ -11,7 +12,6 @@ const StyledSocial = styled.div`
         .social {
             display: flex;
             flex-direction: column;
-            // justify-content: flex-end;
             align-items: center;
             position: fixed;
             bottom: 0;
@@ -62,8 +62,8 @@ const SocialAside = () => (
     <StyledSocial>
         <div className="social">
             <div className="social-icons">
-                <a href="https://github.com/o-louis" target="blank" className="github"><GithubIcon /></a>
-                <a href="https://www.linkedin.com/in/oriane-louis/" target="blank"><LinkedInIcon /></a>
+                <Link to="https://github.com/o-louis" target="blank" className="github"><GithubIcon /></Link>
+                <Link to="https://www.linkedin.com/in/oriane-louis/" target="blank"><LinkedInIcon /></Link>
             </div>
             <div className="line"></div>
         </div>

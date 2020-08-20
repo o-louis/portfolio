@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import GithubIcon from "./icons/github"
@@ -13,7 +14,6 @@ const StyledSocial = styled.div`
         display: flex;
         justify-content: center;
         width: 100%;
-        // width: ${props => props.onHomePage ? "20%" : "30%"};
         align-self: center;
     }
 
@@ -37,12 +37,12 @@ const StyledSocial = styled.div`
     }
 `
 
-const Social = ({ onHomePage}) => {
+const Social = () => {
     return (
         <StyledSocial className="social-infos" >
             <div className="social-icons">
-                <a href="https://github.com/o-louis" target="blank" className="github"><GithubIcon /></a>
-                <a href="https://www.linkedin.com/in/oriane-louis/" target="blank"><LinkedInIcon /></a>
+                <Link to="https://github.com/o-louis" target="blank" className="github"><GithubIcon /></Link>
+                <Link to="https://www.linkedin.com/in/oriane-louis/" target="blank"><LinkedInIcon /></Link>
             </div>
             <span className="email">oriane.louis.pro@gmail.com</span>
         </StyledSocial>

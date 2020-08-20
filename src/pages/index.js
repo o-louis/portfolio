@@ -147,7 +147,7 @@ const Home = () => (
         <span className="bracket">{"}"}</span>
       </div>
     </StyledSection>
-    <Social onHomePage="none"/>
+    <Social />
   </Layout>
 )
 
