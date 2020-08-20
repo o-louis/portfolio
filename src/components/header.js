@@ -6,11 +6,15 @@ import Hamburger from './hamburger';
 import styled from 'styled-components'
 
 const StyledHeader = styled.header`
-    padding: 35px 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 35px 24px;
+    background-color: #111A28;
 `
 
 

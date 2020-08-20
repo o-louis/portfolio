@@ -12,6 +12,7 @@ import chatapp from "../images/chatapp.png"
 const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
     .title-section {
         margin-bottom: 30px;
     }
