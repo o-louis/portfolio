@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import Layout from "../components/layout"
 import styled from 'styled-components'
 
@@ -56,6 +56,7 @@ const StyledSection = styled.section`
                 margin-bottom: 10px;
                 overflow: hidden;
                 height: 166px;
+                cursor: pointer;
             }
             .projects-infos {
                 h4 {
@@ -147,111 +148,150 @@ const StyledSection = styled.section`
         max-width: 1400px;
     }
 `
-const Projects = () => (
-    <Layout template="projects">
-        <StyledSection>
-            <div className="title-section">
-                <div className="title-bloc">
-                    <h1>Projects</h1>
-                    <div className="circle" />
-                </div>
-                <div className="line" />
-            </div>
+const stylesOverlay = {
+    position: "absolute",
+    top: "0",
+    background: "rgba(0, 0, 0, 0.7)",
+    zIndex: "200",
+    width: "100vw",
+    height: "100vh",
+    marginLeft: "-1.5rem",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+}
 
-            <div className="projects">
-                <div className="projects-item">
-                    <div className="projects-img">
-                        <img src={starzplay} alt="starzplay" />
-                    </div>
-                    <div className="projects-infos">
-                        <h4>STARZPLAY<a href="https://m.boutique.orange.fr/tv/starzplay" target="blank">for Orange STBs</a></h4>
-                        <p>From scratch - Official Starzplay  app</p>
-                        <div className="technologies">
-                            <div>Javascript</div>
-                            <div>JQuery</div>
-                            <div>MVC</div>
-                        </div>
-                        <div className="disabled">Confidential source</div>
-                    </div>
-                </div>
+const stylesImgContainer = {
+    marginLeft: "1.5rem"
+}
 
-                <div className="projects-item">
-                    <div className="projects-img">
-                        <img src={arte} alt="arte" />
-                    </div>
-                    <div className="projects-infos">
-                        <h4>ARTE  <a href="https://www.arte.tv/fr/" target="blank">app</a></h4>
-                        <p>From scratch - Official ARTE for HbbTV, Orange STBs and Freebox</p>
-                        <div className="technologies">
-                            <div>Javascript</div>
-                            <div>MVC</div>
-                        </div>
-                        <div className="disabled">Confidential source</div>
-                    </div>
-                </div>
-
-                <div className="projects-item">
-                    <div className="projects-img">
-                        <img src={mernblog} alt="mernblog" />
-                    </div>
-                    <div className="projects-infos">
-                        <h4>MERN BLOG</h4>
-                        <p>Blog with CRUD actions</p>
-                        <div className="technologies">
-                            <div>MERN</div>
-                            <div>Reactjs</div>
-                            <div>Nodejs</div>
-                        </div>
-                        <a href="https://github.com/o-louis/MERN-Blog" target="blank">View source</a>
-                    </div>
-                </div>
-
-                <div className="projects-item">
-                    <div className="projects-img">
-                        <img src={covidtracker} alt="covidtracker" />
-                    </div>
-                    <div className="projects-infos">
-                        <h4>Covid tracker</h4>
-                        <div className="technologies">
-                            <div>Reactjs</div>
-                            <div>Javascript</div>
-                        </div>
-                        <a href="https://github.com/o-louis/covid-tracker-19" target="blank">View source</a>
-                        <a href="https://covidtracker19-olouis.netlify.app" target="blank">Preview</a>
-                    </div>
-                </div>
-
-                <div className="projects-item">
-                    <div className="projects-img">
-                        <img src={chatapp} alt="chatapp" />
-                    </div>
-                    <div className="projects-infos">
-                        <h4>Chat app</h4>
-                        <div className="technologies">
-                            <div>Reactjs</div>
-                            <div>SocketIO</div>
-                        </div>
-                        <a href="https://github.com/o-louis/chat-app" target="blank">View source</a>
-                    </div>
-                </div>
-
-                <div className="projects-item">
-                    <div className="projects-img">
-                        <img src={authentication} alt="authentication" />
-                    </div>
-                    <div className="projects-infos">
-                        <h4>Authentication</h4>
-                        <div className="technologies">
-                            <div>Nodejs</div>
-                            <div>Ejs</div>
-                            <div>Jwt</div>
-                        </div>
-                        <a href="https://github.com/o-louis/authentication" target="blank">View source</a>
-                    </div>
+const OpenModal = ({modal, toggleModal, img}) => {
+    if (modal) {
+        return (
+            <div style={stylesOverlay} onClick={toggleModal}>
+                <div style={stylesImgContainer}>
+                    <img src={img} alt={img} />
                 </div>
             </div>
-        </StyledSection>
-    </Layout>
-)
+        )
+    }
+    return <></>;
+}
+
+const Projects = () => {
+    const [modal, setModal] = useState(false);
+    const [img, setImg] = useState("");
+    const toggleModal = (img) => {
+        setModal(modal => !modal);
+        setImg(img);
+    }
+    return (
+        <Layout template="projects">
+            <OpenModal modal={modal} toggleModal={toggleModal} img={img} />
+            <StyledSection>
+                <div className="title-section">
+                    <div className="title-bloc">
+                        <h1>Projects</h1>
+                        <div className="circle" />
+                    </div>
+                    <div className="line" />
+                </div>
+
+                <div className="projects">
+                    <div className="projects-item">
+                        <div className="projects-img">
+                            <img src={starzplay} alt="starzplay" onClick={() => toggleModal(starzplay)} />
+                        </div>
+                        <div className="projects-infos">
+                            <h4>STARZPLAY<a href="https://m.boutique.orange.fr/tv/starzplay" target="blank">for Orange STBs</a></h4>
+                            <p>From scratch - Official Starzplay  app</p>
+                            <div className="technologies">
+                                <div>Javascript</div>
+                                <div>JQuery</div>
+                                <div>MVC</div>
+                            </div>
+                            <div className="disabled">Confidential source</div>
+                        </div>
+                    </div>
+
+                    <div className="projects-item">
+                        <div className="projects-img">
+                            <img src={arte} alt="arte" onClick={() => toggleModal(arte)} />
+                        </div>
+                        <div className="projects-infos">
+                            <h4>ARTE  <a href="https://www.arte.tv/fr/" target="blank">app</a></h4>
+                            <p>From scratch - Official ARTE for HbbTV, Orange STBs and Freebox</p>
+                            <div className="technologies">
+                                <div>Javascript</div>
+                                <div>MVC</div>
+                            </div>
+                            <div className="disabled">Confidential source</div>
+                        </div>
+                    </div>
+
+                    <div className="projects-item">
+                        <div className="projects-img">
+                            <img src={mernblog} alt="mernblog" onClick={() => toggleModal(mernblog)} />
+                        </div>
+                        <div className="projects-infos">
+                            <h4>MERN BLOG</h4>
+                            <p>Blog with CRUD actions</p>
+                            <div className="technologies">
+                                <div>MERN</div>
+                                <div>Reactjs</div>
+                                <div>Nodejs</div>
+                            </div>
+                            <a href="https://github.com/o-louis/MERN-Blog" target="blank">View source</a>
+                        </div>
+                    </div>
+
+                    <div className="projects-item">
+                        <div className="projects-img">
+                            <img src={covidtracker} alt="covidtracker" onClick={() => toggleModal(covidtracker)} />
+                        </div>
+                        <div className="projects-infos">
+                            <h4>Covid tracker</h4>
+                            <div className="technologies">
+                                <div>Reactjs</div>
+                                <div>Javascript</div>
+                            </div>
+                            <a href="https://github.com/o-louis/covid-tracker-19" target="blank">View source</a>
+                            <a href="https://covidtracker19-olouis.netlify.app" target="blank">Preview</a>
+                        </div>
+                    </div>
+
+                    <div className="projects-item">
+                        <div className="projects-img">
+                            <img src={chatapp} alt="chatapp" onClick={() => toggleModal(chatapp)} />
+                        </div>
+                        <div className="projects-infos">
+                            <h4>Chat app</h4>
+                            <div className="technologies">
+                                <div>Reactjs</div>
+                                <div>SocketIO</div>
+                            </div>
+                            <a href="https://github.com/o-louis/chat-app" target="blank">View source</a>
+                        </div>
+                    </div>
+
+                    <div className="projects-item">
+                        <div className="projects-img">
+                            <img src={authentication} alt="authentication" onClick={() => toggleModal(authentication)} />
+                        </div>
+                        <div className="projects-infos">
+                            <h4>Authentication</h4>
+                            <div className="technologies">
+                                <div>Nodejs</div>
+                                <div>Ejs</div>
+                                <div>Jwt</div>
+                            </div>
+                            <a href="https://github.com/o-louis/authentication" target="blank">View source</a>
+                        </div>
+                    </div>
+                </div>
+            </StyledSection>
+        </Layout>
+    )
+}
 
 export default Projects
