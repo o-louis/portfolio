@@ -9,6 +9,13 @@ import mernblog from "../images/mernblog.png"
 import authentication from "../images/authentication.png"
 import chatapp from "../images/chatapp.png"
 
+import starzplay_preview from "../images/starzplay_preview.png"
+import arte_preview from "../images/arte_preview.png"
+import covid_preview from "../images/covid_preview.png"
+import authentication_preview from "../images/authentication_preview.png"
+import mernblog_preview from "../images/mernblog.png"
+import chatapp_preview from "../images/chatapp_preview.png"
+
 const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
@@ -200,7 +207,7 @@ const Projects = () => {
                 <div className="projects">
                     <div className="projects-item">
                         <div className="projects-img">
-                            <img src={starzplay} alt="starzplay" onClick={() => toggleModal(starzplay)} />
+                            <img src={starzplay} alt="starzplay" onClick={() => toggleModal(starzplay_preview)} />
                         </div>
                         <div className="projects-infos">
                             <h4>STARZPLAY<a href="https://m.boutique.orange.fr/tv/starzplay" target="blank">for Orange STBs</a></h4>
@@ -216,7 +223,7 @@ const Projects = () => {
 
                     <div className="projects-item">
                         <div className="projects-img">
-                            <img src={arte} alt="arte" onClick={() => toggleModal(arte)} />
+                            <img src={arte} alt="arte" onClick={() => toggleModal(arte_preview)} />
                         </div>
                         <div className="projects-infos">
                             <h4>ARTE  <a href="https://www.arte.tv/fr/" target="blank">app</a></h4>
@@ -231,7 +238,7 @@ const Projects = () => {
 
                     <div className="projects-item">
                         <div className="projects-img">
-                            <img src={mernblog} alt="mernblog" onClick={() => toggleModal(mernblog)} />
+                            <img src={mernblog} alt="mernblog" onClick={() => toggleModal(mernblog_preview)} />
                         </div>
                         <div className="projects-infos">
                             <h4>MERN BLOG</h4>
@@ -247,7 +254,7 @@ const Projects = () => {
 
                     <div className="projects-item">
                         <div className="projects-img">
-                            <img src={covidtracker} alt="covidtracker" onClick={() => toggleModal(covidtracker)} />
+                            <img src={covidtracker} alt="covidtracker" onClick={() => toggleModal(covid_preview)} />
                         </div>
                         <div className="projects-infos">
                             <h4>Covid tracker</h4>
@@ -262,7 +269,7 @@ const Projects = () => {
 
                     <div className="projects-item">
                         <div className="projects-img">
-                            <img src={chatapp} alt="chatapp" onClick={() => toggleModal(chatapp)} />
+                            <img src={chatapp} alt="chatapp" onClick={() => toggleModal(chatapp_preview)} />
                         </div>
                         <div className="projects-infos">
                             <h4>Chat app</h4>
@@ -276,7 +283,7 @@ const Projects = () => {
 
                     <div className="projects-item">
                         <div className="projects-img">
-                            <img src={authentication} alt="authentication" onClick={() => toggleModal(authentication)} />
+                            <img src={authentication} alt="authentication" onClick={() => toggleModal(authentication_preview)} />
                         </div>
                         <div className="projects-infos">
                             <h4>Authentication</h4>
