@@ -33,7 +33,6 @@ const StyledLayout = styled.div`
   @media (min-width: 1024px) {
     #main-content {
       margin: 0;
-      margin-top: 9rem;
       max-width: ${props => props.template ? null : "1600px"};
     }
   }

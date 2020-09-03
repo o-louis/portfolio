@@ -51,7 +51,7 @@ const StyledSection = styled.section`
                 line-height: 1.4;
                 font-weight: lighter;
                 span {
-                    color: #FFEA78;
+                    color: #00BFFF;
                 }
             }
             .company-logo {
@@ -90,7 +90,7 @@ const StyledSection = styled.section`
                     text-align: center;
                     font-size: 1rem;
                     padding: 3%;
-                    border: 1px solid #747474;
+                    border: 1px solid white;
                     border-radius: 3px;
                 }
             }
@@ -196,8 +196,7 @@ const About = () => (
                         to become a fullstack developer.
 
                         I also have the curiosity to learn new
-                        concept. That’s why I’m not afraid to learn
-                        I like <span>challenges</span> and <span>surpass myself.</span>
+                        concept. That is why I like <span>challenges</span> and <span>surpass myself.</span>
                     </p>
                 </div>
             </div>

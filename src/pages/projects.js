@@ -91,6 +91,12 @@ const StyledSection = styled.section`
                 .disabled {
                     font-size: 1rem;
                 }
+                p {
+                    font-size: 1rem;
+                    height: 48px;
+                    margin-top: -9px;
+                    margin-bottom: 10px;
+                }
             }
         }
     }
@@ -159,6 +165,7 @@ const Projects = () => (
                     </div>
                     <div className="projects-infos">
                         <h4>STARZPLAY<a href="https://m.boutique.orange.fr/tv/starzplay" target="blank">for Orange STBs</a></h4>
+                        <p>From scratch - Official Starzplay  app</p>
                         <div className="technologies">
                             <div>Javascript</div>
                             <div>JQuery</div>
@@ -173,7 +180,8 @@ const Projects = () => (
                         <img src={arte} alt="arte" />
                     </div>
                     <div className="projects-infos">
-                        <h4>ARTE  <a href="https://www.arte.tv/fr/" target="blank"> for HbbTV</a></h4>
+                        <h4>ARTE  <a href="https://www.arte.tv/fr/" target="blank">app</a></h4>
+                        <p>From scratch - Official ARTE for HbbTV, Orange STBs and Freebox</p>
                         <div className="technologies">
                             <div>Javascript</div>
                             <div>MVC</div>
@@ -188,6 +196,7 @@ const Projects = () => (
                     </div>
                     <div className="projects-infos">
                         <h4>MERN BLOG</h4>
+                        <p>Blog with CRUD actions</p>
                         <div className="technologies">
                             <div>MERN</div>
                             <div>Reactjs</div>
