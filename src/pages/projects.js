@@ -8,6 +8,7 @@ import covidtracker from "../images/covidtracker.png"
 import mernblog from "../images/mernblog.png"
 import authentication from "../images/authentication.png"
 import chatapp from "../images/chatapp.png"
+import moovee from "../images/moovee.png"
 
 import starzplay_preview from "../images/starzplay_preview.png"
 import arte_preview from "../images/arte_preview.png"
@@ -15,6 +16,7 @@ import covid_preview from "../images/covid_preview.png"
 import authentication_preview from "../images/authentication_preview.png"
 import mernblog_preview from "../images/mernblog.png"
 import chatapp_preview from "../images/chatapp_preview.png"
+import moovee_preview from "../images/moovee_preview.png"
 
 const StyledSection = styled.section`
     display: flex;
@@ -252,7 +254,7 @@ const Projects = () => {
                         </div>
                     </div>
 
-                    <div className="projects-item">
+                    {/* <div className="projects-item">
                         <div className="projects-img">
                             <img src={covidtracker} alt="covidtracker" onClick={() => toggleModal(covid_preview)} />
                         </div>
@@ -265,7 +267,7 @@ const Projects = () => {
                             <a href="https://github.com/o-louis/covid-tracker-19" target="blank">View source</a>
                             <a href="https://covidtracker19-olouis.netlify.app" target="blank">Preview</a>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="projects-item">
                         <div className="projects-img">
@@ -293,6 +295,21 @@ const Projects = () => {
                                 <div>Jwt</div>
                             </div>
                             <a href="https://github.com/o-louis/authentication" target="blank">View source</a>
+                        </div>
+                    </div>
+
+                    <div className="projects-item">
+                        <div className="projects-img">
+                            <img src={moovee} alt="moovee" onClick={() => toggleModal(moovee_preview)} />
+                        </div>
+                        <div className="projects-infos">
+                            <h4>Movie project</h4>
+                            <div className="technologies">
+                                <div>Reactjs</div>
+                                <div>Scss</div>
+                            </div>
+                            <a href="https://github.com/o-louis/movie-app" target="blank">View source</a>
+                            <a href="https://moovee-o.netlify.app" target="blank">Preview</a>
                         </div>
                     </div>
                 </div>
