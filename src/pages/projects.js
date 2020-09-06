@@ -21,7 +21,7 @@ import moovee_preview from "../images/moovee_preview.png"
 const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     .title-section {
         margin-bottom: 30px;
     }
@@ -113,7 +113,9 @@ const StyledSection = styled.section`
 
     @media (min-width: 481px) {
         margin: 0;
+        margin-bottom: 50px;
         .projects {
+            grid-row-gap: 20px;
             .projects-item {
                 font-size: 1.3rem;
                 .projects-infos {
@@ -137,6 +139,7 @@ const StyledSection = styled.section`
         padding: 0 3rem;
         margin: 0;
         margin-left: 0;
+        margin-bottom: 50px;
         .projects {
             grid-template-columns: repeat(2, 50%);
             grid-column-gap: 20px;
@@ -148,19 +151,22 @@ const StyledSection = styled.section`
     }
     @media (min-width: 1024px) {
         .projects {
-            grid-template-columns: repeat(3, 30%);
+            grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 20px;
         }
     }
     @media (min-width: 1224px) {
         margin-left: 90px;
-        max-width: 1400px;
+        .projects {
+            width: 100%;
+            grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+        }
     }
 `
 const stylesOverlay = {
-    position: "absolute",
+    position: "fixed",
     top: "0",
-    background: "rgba(0, 0, 0, 0.7)",
+    background: "rgba(0, 0, 0, 0.8)",
     zIndex: "200",
     width: "100vw",
     height: "100vh",
@@ -251,10 +257,11 @@ const Projects = () => {
                                 <div>Nodejs</div>
                             </div>
                             <a href="https://github.com/o-louis/MERN-Blog" target="blank">View source</a>
+                            <a href="https://bloggie.netlify.app" target="blank">Preview</a>
                         </div>
                     </div>
 
-                    {/* <div className="projects-item">
+                    <div className="projects-item">
                         <div className="projects-img">
                             <img src={covidtracker} alt="covidtracker" onClick={() => toggleModal(covid_preview)} />
                         </div>
@@ -267,7 +274,7 @@ const Projects = () => {
                             <a href="https://github.com/o-louis/covid-tracker-19" target="blank">View source</a>
                             <a href="https://covidtracker19-olouis.netlify.app" target="blank">Preview</a>
                         </div>
-                    </div> */}
+                    </div>
 
                     <div className="projects-item">
                         <div className="projects-img">
@@ -277,9 +284,11 @@ const Projects = () => {
                             <h4>Chat app</h4>
                             <div className="technologies">
                                 <div>Reactjs</div>
+                                <div>Express</div>
                                 <div>SocketIO</div>
                             </div>
                             <a href="https://github.com/o-louis/chat-app" target="blank">View source</a>
+                            <a href="https://reachatt.netlify.app">Preview</a>
                         </div>
                     </div>
 
