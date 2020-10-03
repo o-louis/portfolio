@@ -15,6 +15,7 @@ const StyledSocial = styled.div`
             align-items: center;
             position: fixed;
             bottom: 0;
+            left: 25px;
             .line {
                 background-color: white;
                 height: 120px;

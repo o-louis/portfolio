@@ -9,6 +9,7 @@ import mernblog from "../images/mernblog.png"
 import authentication from "../images/authentication.png"
 import chatapp from "../images/chatapp.png"
 import moovee from "../images/moovee.png"
+import hackernews from "../images/hackernews.png"
 
 import starzplay_preview from "../images/starzplay_preview.png"
 import arte_preview from "../images/arte_preview.png"
@@ -111,6 +112,10 @@ const StyledSection = styled.section`
         }
     }
 
+    .modal {
+        width: 10vw;
+    }
+
     @media (min-width: 481px) {
         margin: 0;
         margin-bottom: 50px;
@@ -173,11 +178,17 @@ const stylesOverlay = {
     marginLeft: "-1.5rem",
     display: "flex",
     justifyContent: "center",
-    alignItems: "center"
+    alignItems: "center",
+    padding: "4rem"
 }
 
 const stylesImgContainer = {
-    marginLeft: "1.5rem"
+    width: "100%",
+    maxWidth: "1000px"
+}
+
+const styleImg = {
+    objectFit: "cover"
 }
 
 const OpenModal = ({modal, toggleModal, img}) => {
@@ -185,7 +196,7 @@ const OpenModal = ({modal, toggleModal, img}) => {
         return (
             <div style={stylesOverlay} onClick={toggleModal}>
                 <div style={stylesImgContainer}>
-                    <img src={img} alt={img} />
+                    <img src={img} alt={img} style={styleImg}/>
                 </div>
             </div>
         )
@@ -319,6 +330,21 @@ const Projects = () => {
                             </div>
                             <a href="https://github.com/o-louis/movie-app" target="blank">View source</a>
                             <a href="https://moovee-o.netlify.app" target="blank">Preview</a>
+                        </div>
+                    </div>
+
+                    <div className="projects-item">
+                        <div className="projects-img">
+                            <img src={hackernews} alt="moovee" onClick={() => toggleModal(hackernews)} />
+                        </div>
+                        <div className="projects-infos">
+                            <h4>Hacker News</h4>
+                            <div className="technologies">
+                                <div>Vuejs</div>
+                                <div>Sass</div>
+                            </div>
+                            <a href="https://github.com/o-louis/hacker-news" target="blank">View source</a>
+                            <a href="https://hackernews-v1.netlify.app" target="blank">Preview</a>
                         </div>
                     </div>
                 </div>
